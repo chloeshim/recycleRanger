@@ -1,0 +1,22 @@
+{
+  "name": "srid-plastics",
+  "version": "1.0.0",
+  "description": "Plastics team",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmerlinz/SRID-Plastics.git"
+  },
+  "keywords": [
+    "plastics"
+  ],
+  "author": "plastics-team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmerlinz/SRID-Plastics/issues"
+  },
+  "homepage": "https://github.com/jmerlinz/SRID-Plastics#readme"
+}
