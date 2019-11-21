@@ -2,7 +2,7 @@
   "name": "srid-plastics",
   "version": "1.0.0",
   "description": "Plastics team",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js 3000",
     "test": "test"
