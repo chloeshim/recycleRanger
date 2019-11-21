@@ -4,6 +4,7 @@
   "description": "Plastics team",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon app.js 3000",
     "test": "test"
   },
   "repository": {
@@ -18,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/jmerlinz/SRID-Plastics/issues"
   },
-  "homepage": "https://github.com/jmerlinz/SRID-Plastics#readme"
+  "homepage": "https://github.com/jmerlinz/SRID-Plastics#readme",
+  "devDependencies": {
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "mongoose": "^5.7.12",
+    "nodemon": "^2.0.0"
+  }
 }
