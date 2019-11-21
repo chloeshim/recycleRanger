@@ -20,7 +20,7 @@ new SRIDRoute(app);
 
 const url =
   process.env.MONGODB_URI ||
-  'mongodb+srv://fse:iILVqSdgAMPA2UV6@cluster0-jsqk4.mongodb.net/test?retryWrites=true&w=majority';
+  'mongodb+srv://sridTeam:dbUserPassword@plastics-srb5j.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(url, { useNewUrlParser: true, useCreateIndex: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
