@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>RecycleRanger Style Guide</title>
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="base.css"/>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+</head>
+<body>
+
+<div class="container">
+
+	<div class="jumbotron">
+		<h1>Recycle Ranger Style Guide!</h1>
+		<p>This is the style guide that should be use throughout the Recycle Ranger app.</p>
+	</div>
+
+	<div class="style-section headers">
+		
+		<h1>Headers</h1>
+
+		<h1> h1. Recycle Ranger heading</h1>
+		<h2> h2. Recycle Ranger heading</h2>
+		<h3> h3. Recycle Ranger heading</h3>
+		<h4> h4. Recycle Ranger heading</h4>
+		<h5> h5. Recycle Ranger heading</h5>
+		<h6> h6. Recycle Ranger heading</h6>
+
+	</div>
+
+	<div class="style-section colors">
+		
+		<h1>Colors</h1>
+		<p>Here are the colors used throughout Recycle Ranger app:</p>
+
+		<div class="row color-container">
+			
+			<div class="col-1">
+				<!-- left padding -->
+			</div>
+
+
+			<div class="col-2 bg-light-grey text-light">
+				Light Grey 
+				(#BF9765)
+			</div>
+
+			<div class="col-2 bg-dark-green text-light">
+				Dark Green 
+				(#435938)
+			</div>
+
+			<div class="col-2 bg-medium-green text-light">
+				Medium Green 
+				(#658C5A)
+			</div>
+
+			<div class="col-2 bg-light-green text-dark">
+				Light Green 
+				(#C6D936)
+			</div>
+			
+			<div class="col-2 bg-dark-brown text-dark">
+				Dark Brown 
+				(#BF9765)
+			</div>
+
+			<div class="col-1">
+				<!-- right padding -->
+			</div>
+
+		</div>
+	</div>
+
+	<div class="style-section buttons">
+		<h1>Buttons</h1>
+
+		<p>Here are the possible buttons:</p>
+		<button class="btn btn-primary">Primary button</button>
+		<button class="btn btn-secondary">Secondary button</button>		
+	</div>
+
+
+	<div class="style-section navigation-tab">
+		<h1>Navigation tab</h1>
+
+		<p>Here's what the navigation tab look like:</p>
+		
+		<div class="btn-group btn-group-toggle" data-toggle="buttons">
+		  <label class="btn btn-primary active">
+		    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+		  </label>
+		  <label class="btn btn-primary">
+		    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+		  </label>
+		  <label class="btn btn-primary">
+		    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+		  </label>
+		</div>
+
+	</div>
+
+	<div class="style-section text-list">
+		
+		<h1>Modal</h1>
+		<p>Here's how a modal should look like:</p>
+
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		  Launch demo modal
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<script type="text/javascript">
+			
+			$('#exampleModal').on('shown.bs.modal', function () {
+			  $('#myInput').trigger('focus')
+			})
+		</script>
+
+	</div>
+</div>
+
+
+
+</body>
+</html>
