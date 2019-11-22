@@ -6,12 +6,21 @@ body {
     min-height: 100%;
 }
 
-.outer {
-    display: table;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #026928;
+h3 {
+    color: #026928;
+}
+
+.home {
+    margin-top: 10%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.home_table {
+    border: 1px solid #435938;
 }
