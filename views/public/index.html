@@ -11,6 +11,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
     <script src="javascripts/index.js"></script>
+    <!-- TODO: This script could've been imported in the footer_menu.html, but somehow it won't work... Until we figure out how to fix that, please import the footer_menu on the main page. -->
+    <script src="javascripts/footer_menu.js"></script> 
 
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
@@ -45,46 +47,13 @@
 
     </div>
 
-    <input id="imageInput" type="file" accept="image/*" capture style="display: none;" />
-    <button id="takePhoto" class="btn btn-primary">Take photo</button>
-
-    <img id="imageInputDisplay" src="#" alt="input image" style="height: 100px; width: 100px;"/>
-
 </div>
+
 </body>
 
 
-<footer class="container">
-    
-    <!-- TODO: This should've been loaded from the footer_menu.html, but somehow it doesn't work in this page. Revisit this later to make it properly reusable. -->
-
-    <div class="row bg-dark-green">
-
-        <div class="col-2">
-            <!-- Left padding -->
-        </div>
-
-        <div id=“footerMenu” class="col-8">
-
-    
-                <div style="float: left; width: 80px; border: 1px solid black; border-radius: 10px 0 0 10px;">
-                    <img class="footer_img center" src="images/home_icon.png" alt="Recycle Ranger" height="80" width="880">
-                </div>
-        
-                <div style="float: left; width: 80px; border: 1px solid black;">
-                    <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger" height="80" width="880">
-                </div>
-        
-                <div style="float: left; width: 80px; border: 1px solid black; border-radius: 0px 10px 10px 0px">
-                    <img class="footer_img center" src="images/user_icon.jpg" alt="Recycle Ranger" height="80" width="880">
-                </div>
-        </div>
-
-        <div class="col-2">
-            <!-- Right padding -->
-        </div>
-    </div>
-    
+<footer>
+    <div id="footerMenu"></div>
 </footer>
 
 </html>
