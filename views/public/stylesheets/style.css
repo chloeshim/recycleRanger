@@ -14,13 +14,37 @@ h3 {
     margin-top: 10%;
 }
 
+.main {
+    margin-top: 10%;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+.main_container {
+    margin-top: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
 
 .home_table {
     border: 1px solid #435938;
+}
+
+.user_img {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; 
+    border: 2px solid black;
 }
