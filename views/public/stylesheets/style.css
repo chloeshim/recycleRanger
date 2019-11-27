@@ -87,7 +87,11 @@ body {
 img.logo {
     height: 180px;
     width: 180px;
-    margin-top: 10%;
+}
+
+img.heart {
+    height: 50px;
+    width: 50px;
 }
 
 .main {
@@ -102,15 +106,37 @@ img.logo {
     margin-right: auto;
 }
 
+
+.welcome {
+    text-align: center;
+    border-bottom: 1px solid darkgreen;
+    padding-top: 5%;
+}
+
+.home h5 {
+    display: inline-block;
+    margin: 7%;
+}
+
+.home h6 {
+    display: inline-block;
+    margin: 7%;
+}
+
+.profile-container div{
+    display:inline-block;
+}
+
+.heart-container {
+    float:right;
+}
+
+
+/* leaderboard */
 .main_container {
     margin-top: 25px;
     border: 2px solid black;
     border-radius: 10px;
-}
-
-
-.home_table {
-    border: 1px solid #435938;
 }
 
 .user_img {
@@ -123,20 +149,4 @@ img.logo {
     -ms-border-radius: 50%;
     border-radius: 50%; 
     border: 2px solid black;
-}
-.home {
-    margin-top: 8%;
-}
-.welcome {
-    text-align: center;
-    border-bottom: 1px solid darkgreen;
-}
-
-.home h5 {
-    display: inline-block;
-    margin: 7%;
-}
-
-.profile-container div{
-    display:inline-block;
 }
