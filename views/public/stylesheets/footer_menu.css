@@ -24,3 +24,18 @@
 .footer_img_wrapper_right_edge {
     border-radius: 0px 10px 10px 0px;
 }
+
+/* TODO: This is a temporary fix, the displayed image might not keep its aspect ratio. Fix this later. */
+#image_input_display_wrapper {
+    max-width: 100vw;
+    max-height: 100vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#image_input_display {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
