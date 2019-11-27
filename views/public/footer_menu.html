@@ -10,8 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-    <script src="javascripts/index.js" type="text/jsx"></script>
 
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/footer_menu.css">
@@ -25,8 +23,10 @@
             <img class="footer_img center" src="images/home_icon.png" alt="Recycle Ranger">
         </div>
 
-        <div class="footer_img_wrapper">
+        <div id="footer_btn_take_picture" class="footer_img_wrapper">
+
             <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger">
+            <input id="footer_take_picture_input" type="file" accept="image/*" capture style="display: none;" />
         </div>
 
         <div class="footer_img_wrapper_right_edge">
