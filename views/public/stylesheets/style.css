@@ -168,7 +168,14 @@ img.heart {
     padding-bottom: 5%;
 }
 
+.lesson-title {
+    margin-top:5%;
+}
 
+#lesson_btn {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 
 .footer_img {
     width: 50px;
