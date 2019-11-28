@@ -5,21 +5,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Recycle Ranger</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="javascripts/index.js" type="text/jsx"></script>
+
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/footer_menu.css">
 </head>
 
 <body>
-    <div class="main">
-        <div style="float: left; width: 80px; border: 1px solid black; border-radius: 10px 0 0 10px;"><img class="footer_img center" src="images/home_icon.png" alt="Recycle Ranger" height="80" width="880"></div>
-        <div style="float: left; width: 80px; border: 1px solid black;"><img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger" height="80" width="880"></div>
-        <div style="float: left; width: 80px; border: 1px solid black; border-radius: 0px 10px 10px 0px"><img class="footer_img center" src="images/user_icon.jpg" alt="Recycle Ranger" height="80" width="880"></div>
-        <br style="clear: left;" />
+
+    <div class="footer_menu_wrapper d-flex flex-row justify-content-center">
+
+        <div class="footer_img_wrapper_left_edge">
+            <img class="footer_img center" src="images/home_icon.png" alt="Recycle Ranger">
+        </div>
+
+        <div id="footer_btn_take_picture" class="footer_img_wrapper">
+
+            <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger">
+            <input id="footer_take_picture_input" type="file" accept="image/*" capture style="display: none;" />
+        </div>
+
+        <div class="footer_img_wrapper_right_edge">
+            <img class="footer_img center" src="images/user_icon.jpg" alt="Recycle Ranger">
+        </div>        
+
     </div>
+    
+    <div id="image_input_display_wrapper" class="d-flex flex-row justify-content-center">
+
+        <!-- TODO: Remove this after the analysis page is ready.  -->
+        <img id="image_input_display" src="#" alt="input image"/>
+    </div>    
 </body>
+
 </html>
 
