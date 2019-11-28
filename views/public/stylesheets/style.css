@@ -152,6 +152,24 @@ img.heart {
     border: 2px solid black;
 }
 
+/* Daily Lesson page */
+.instructions span {
+    display: block;
+}
+
+.lesson-img {
+    height: 150px;
+    width: 150px;
+}
+
+.header-title {
+    text-align: center;
+    border-bottom: 1px solid darkgreen;
+    padding-bottom: 5%;
+}
+
+
+
 .footer_img {
     width: 50px;
     height: 50px;
