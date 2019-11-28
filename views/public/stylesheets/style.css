@@ -129,6 +129,7 @@ img.heart {
 
 .heart-container {
     float:right;
+    display:contents !important;
 }
 
 
@@ -157,8 +158,4 @@ img.heart {
     margin: 0 auto;
     margin-bottom: 10px;
     margin-top: 10px;
-}
-
-.profile-container div{
-    display:inline-block;
 }

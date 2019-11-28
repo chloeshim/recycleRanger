@@ -11,6 +11,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="javascripts/index.js" type="text/jsx"></script>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script>
+        $(function(){
+            $("#footerMenu").load("footer_menu.html");
+        });
+    </script>
 </head>
 
 <body>
@@ -30,7 +35,7 @@
             <h5 id="daily_lesson">Daily Lesson</h5>
             <button class="btn btn-primary">Lesson</button>
         </div>
-        <div id="profile_container" class="col-md-8 profile-container">
+        <div id="profile_container" class="profile-container">
             <div>
                 <h6>You saved</h6>
             </div>
@@ -45,5 +50,8 @@
 </div>
 
 </body>
+<footer>
+    <div id="footerMenu"></div>
+</footer>
 </html>
 
