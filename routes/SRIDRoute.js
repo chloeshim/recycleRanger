@@ -19,10 +19,13 @@ module.exports = class FSERoute {
             res.sendFile(path.resolve(__dirname + '/../views/public/leaderboard.html'));
         });
 
+<<<<<<< Updated upstream
         app.get('/quiz', (req, res) => {
             res.sendFile(path.resolve(__dirname + '/../views/public/quiz.html'));
         });
 
+=======
+>>>>>>> Stashed changes
         app.get('/profile', (req, res) => {
             res.sendFile(path.resolve(__dirname + '/../views/public/profile.html'));
         });
