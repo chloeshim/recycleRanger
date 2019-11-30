@@ -188,7 +188,7 @@ img.heart {
 
 /* profile page intro    */
 
-.intro-section{ padding-top: 200px; position: relative; background-size: cover; 
+.intro-section{ padding-top: 120px; position: relative; background-size: cover; 
 	z-index: 1; background-image: url(../images/yosemitte.png);}
 
 .intro-section:before{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; 
