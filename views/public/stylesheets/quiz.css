@@ -11,18 +11,19 @@
     margin-bottom: 5px;
 }
 
-.question-container {
-    padding: 5px;
+.content-container {
+    padding: 10px;
+    padding-bottom: 15px;
     background-color: white;
     font-size: medium;
 }
 
-.quiz-answer-button {
+.button-group {
     padding: 5px;
     text-align: center;
 }
 
-.quiz-answer-button.button {
+.button-group.btn {
     padding: 5px;
     margin: 5px;
 }
