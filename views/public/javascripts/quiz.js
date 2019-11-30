@@ -8,7 +8,6 @@ $(() => {
 
     /* Client */
     const quizClient = function () {
-        $("#footerMenu").load("footer_menu.html");
     }();
 });
 

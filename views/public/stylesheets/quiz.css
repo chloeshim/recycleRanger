@@ -1,4 +1,4 @@
-#main-container{
+#main-container {
     width: 350px;
     background-color: #658C5A;
     margin-top: 10px;
@@ -6,21 +6,23 @@
     padding: 20px;
 }
 
-.page-title{
+.page-title {
     font-size: larger;
     margin-bottom: 5px;
 }
+
 .question-container {
     padding: 5px;
     background-color: white;
     font-size: medium;
 }
-.quiz-answer-button{
+
+.quiz-answer-button {
     padding: 5px;
     text-align: center;
 }
 
-.quiz-answer-button.button{
+.quiz-answer-button.button {
     padding: 5px;
     margin: 5px;
 }

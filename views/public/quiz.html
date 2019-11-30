@@ -10,9 +10,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
     <script src="javascripts/index.js"></script>
-    <!-- TODO: This script could've been imported in the footer_menu.html, but somehow it won't work... Until we figure out how to fix that, please import the footer_menu on the main page. -->
     <script src="javascripts/footer_menu.js"></script>
-
+    
+    <link rel="stylesheet" href="stylesheets/footer_menu.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/quiz.css">
     <script src="javascripts/quiz.js"></script>
@@ -29,13 +29,48 @@ Today's Quiz
 1. Do you take off the lids when you recycle a plastic water bottle?
 </div>
     <div class="quiz-answer-button ">
-        <button class="btn btn-secondary">Yes</button>
-        <button class="btn btn-secondary">No</button>
+        <button class="btn btn-secondary" id="btn_yes">Yes</button>
+        <button class="btn btn-secondary" id="btn_no">No</button>
     </div>
 </div>
 
 </body>
+<button type="button" class="btn btn-info btn-lg D-n" data-toggle="modal" data-target="#modal_reportReadyAlert" id="btn_showReportReadyModal">Open Report Modal</button>
+<div class="modal fade " id="modal_reportReadyAlert" role="dialog">
+    <div class="modal-dialog">
+        <!--Modal content-->
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center; margin: auto">
+                <h2>Incident Report Ready</h2>
+                <p id="alert-text-reportReady"></p>
+            </div>
+            <div class="modal-footer" style="text-align: center; margin: auto">
+                <button type="button" class="btn btn-primary" id="btn_goToFillReport">Fill Now</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Later</button>
+            </div>
+        </div>
+    </div>
+</div>
 <footer>
-    <div id="footerMenu"></div>
+    <div class="footer_menu_wrapper d-flex flex-row justify-content-center">
+        
+        <div class="footer_img_wrapper_left_edge">
+            <a href="/index.html">
+                <img class="footer_img center" src="images/home_icon.png" alt="Recycle Ranger">
+            </a>
+        </div>
+        
+        <div id="footer_btn_take_picture" class="footer_img_wrapper">
+            <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger">
+            <input id="footer_take_picture_input" type="file" accept="image/*" capture style="display: none;" />
+        </div>
+        
+        <div class="footer_img_wrapper_right_edge">
+            <a href="/leaderboard.html">
+                <img class="footer_img center" src="images/user_icon.jpg" alt="Recycle Ranger">
+            </a>
+        </div>
+    
+    </div>
 </footer>
 </html>

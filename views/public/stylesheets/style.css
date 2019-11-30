@@ -148,7 +148,7 @@ img.heart {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
-    border-radius: 50%; 
+    border-radius: 50%;
     border: 2px solid black;
 }
 
@@ -190,3 +190,5 @@ img.heart {
     width: 80px;
     margin-top: 10%;
 }
+
+.D-n { display: none !important;  }
