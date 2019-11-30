@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,18 +16,37 @@
 
     <link rel="stylesheet" href="stylesheets/style.css">
     <script>
-        $(function(){
+        $(function () {
             $("#footerMenu").load("footer_menu.html");
-        });
-        $(function(){
-            $("#headerLogo").load("header.html");
         });
     </script>
 </head>
-<header>
-    <div id="headerLogo"></div>
-</header>
+
 <body>
 
+    <div class="main">
+        <section class="intro-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-lg-2"></div>
+                    <div class="col-md-10 col-lg-8">
+                        <div class="intro">
+                            <div class="profile-img"><img src="images/sasha_profile.png" alt=""></div>
+                            <h2><b>Sasha</b></h2>
+                            <h4 class="font-yellow dark-brown">Recycle ranger since 2018</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
 </body>
+
+
+<footer>
+    <div id="footerMenu"></div>
+</footer>
+
 </html>
