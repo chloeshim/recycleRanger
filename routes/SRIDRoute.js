@@ -23,6 +23,10 @@ module.exports = class FSERoute {
             res.sendFile(path.resolve(__dirname + '/../views/public/quiz.html'));
         });
 
+        app.get('/profile', (req, res) => {
+            res.sendFile(path.resolve(__dirname + '/../views/public/profile.html'));
+        });
+
         app.get('/footer', (req, res) => {
             res.sendFile(path.resolve(__dirname + '/../views/public/footer_menu.html'));
         });
