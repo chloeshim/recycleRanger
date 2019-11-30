@@ -8,25 +8,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    
     <script src="javascripts/index.js"></script>
     <!-- TODO: This script could've been imported in the footer_menu.html, but somehow it won't work... Until we figure out how to fix that, please import the footer_menu on the main page. -->
     <script src="javascripts/footer_menu.js"></script>
 
     <link rel="stylesheet" href="stylesheets/style.css">
-    <script>
-        $(function(){
-            $("#footerMenu").load("footer_menu.html");
-        });
-        $(function(){
-            $("#headerLogo").load("header.html");
-        });
-    </script>
+    <link rel="stylesheet" href="stylesheets/quiz.css">
+    <script src="javascripts/quiz.js"></script>
 </head>
 <header>
-    <div id="headerLogo"></div>
+    <img src="images/Recycle Ranger.png" class="center header_logo" alt="Recycle Ranger">
 </header>
 <body>
+<div class="container-fluid" id="main-container">
+<div class="page-title text-center">
+Today's Quiz
+</div>
+<div class="container question-container">
+1. Do you take off the lids when you recycle a plastic water bottle?
+</div>
+    <div class="quiz-answer-button ">
+        <button class="btn btn-secondary">Yes</button>
+        <button class="btn btn-secondary">No</button>
+    </div>
+</div>
 
 </body>
+<footer>
+    <div id="footerMenu"></div>
+</footer>
 </html>

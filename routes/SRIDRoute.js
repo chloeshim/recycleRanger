@@ -5,7 +5,7 @@ module.exports = class FSERoute {
 
 
     constructor(app) {
-    
+
         /* get */
         app.get('/', (req, res) => {
             res.sendFile(path.resolve(__dirname + '/../views/public/index.html'));
@@ -17,6 +17,10 @@ module.exports = class FSERoute {
 
         app.get('/leader', (req, res) => {
             res.sendFile(path.resolve(__dirname + '/../views/public/leaderboard.html'));
+        });
+
+        app.get('/quiz', (req, res) => {
+            res.sendFile(path.resolve(__dirname + '/../views/public/quiz.html'));
         });
 
         app.get('/footer', (req, res) => {
