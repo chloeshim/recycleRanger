@@ -37,12 +37,17 @@ function observeTakePictureInput() {
 
 function resetRecyclingStepsModal() {
     
-    $("#recycling_steps_title").html("Analyzing waste type, please wait...")
+    $("#recycling_steps_title").html("Analyzing waste type...")
     $("#recycling_steps_list").empty()
     
-    $("#recycling_steps_spinner").show()
+    showSpinners()
 }
 
+function showSpinners() {
+
+    $("#modal_title_spinner").show()
+    $("#recycling_steps_spinner").show()
+}
 
 function showRecyclingStepsModal(input) {
 
@@ -79,7 +84,7 @@ function retrieveRecyclingStepsForImageInForm() {
         enctype: 'multipart/form-data',
         success: (data, status, xhr) => {
             
-            $("#recycling_steps_spinner").hide()
+            hideSpinners()
 
             setWasteTypeTitle(data.wasteType)
             setRecyclingSteps(data.recyclingSteps)            
@@ -90,6 +95,12 @@ function retrieveRecyclingStepsForImageInForm() {
         }
     })
 
+}
+
+function hideSpinners() {
+    
+    $("#modal_title_spinner").hide()
+    $("#recycling_steps_spinner").hide()
 }
 
 function setWasteTypeTitle(wasteType) {

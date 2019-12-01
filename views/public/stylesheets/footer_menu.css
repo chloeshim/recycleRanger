@@ -38,3 +38,7 @@
     width: auto;
     height: auto;
 }
+
+#modal_title_spinner {
+    margin-inline-start: 10px;
+}
