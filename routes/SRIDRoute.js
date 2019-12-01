@@ -2,7 +2,10 @@
 const path = require("path");
 
 const multer =  require("multer");
-const imageuploads = multer({ dest: "imageuploads/" });
+const imageUploadsFolderPath = "imageuploads/"
+const imageUploads = multer({ dest: imageUploadsFolderPath });
+
+const imageLabelingService = require("../services/ImageLabelingService");
 
 module.exports = class FSERoute {
 
@@ -35,14 +38,24 @@ module.exports = class FSERoute {
         });
 
         /* post */
-        app.post('/wasteimages', imageuploads.single("wasteimage"), (req, res, next) => {
+        app.post('/wasteimages', imageUploads.single("wasteimage"), async (req, res, next) => {
             
             // TODO: Implement proper handling here later.
-            console.log("Received file: " + req.file);
+            var receivedFile = req.file
+            console.log("Received file information:")
 
-            // TODO: Return proper waste type based on the passed image later.
-            res.send({wastetype: "unknown"})
+            console.log("name: " + receivedFile.filename)
+            console.log("encoding: " + receivedFile.encoding)
+            console.log("mimetype: " + receivedFile.mimetype)
+            console.log("size: " + receivedFile.size)
+
+            var imageFilePath = imageUploadsFolderPath + receivedFile.filename
+            var wasteType = await imageLabelingService.getLabelForImage(imageFilePath)
+            
+            // TODO: Add recycling steps later.
+            res.send({ 
+                "wastetype": wasteType
+            })
         })
-
     }
 }
