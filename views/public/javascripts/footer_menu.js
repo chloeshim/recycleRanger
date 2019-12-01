@@ -74,7 +74,14 @@ function submitImageFileToServer() {
         enctype: 'multipart/form-data',
         success: (data, status, xhr) => {
             // TODO: Add proper implementation here later.
-            console.log("received wastetype: " + data.wastetype)
+
+            console.log("Received waste type: " + data.wasteType)
+
+            console.log("Recycling steps:")
+            
+            data.recyclingSteps.forEach(step => {
+                console.log(step)
+            })
         },
         error: (xhr) => {
             // TODO: Add proper implementation here later.
