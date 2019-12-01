@@ -6,6 +6,7 @@ const imageUploadsFolderPath = "imageuploads/"
 const imageUploads = multer({ dest: imageUploadsFolderPath });
 
 const imageLabelingService = require("../services/ImageLabelingService");
+const wasteRecyclingStepService = require("../services/WasteRecyclingStepService");
 
 module.exports = class FSERoute {
 
@@ -51,10 +52,11 @@ module.exports = class FSERoute {
 
             var imageFilePath = imageUploadsFolderPath + receivedFile.filename
             var wasteType = await imageLabelingService.getLabelForImage(imageFilePath)
+            var recyclingSteps = wasteRecyclingStepService.getRecyclingSteps(wasteType)
             
-            // TODO: Add recycling steps later.
             res.send({ 
-                "wastetype": wasteType
+                "wasteType": wasteType,
+                "recyclingSteps": recyclingSteps
             })
         })
     }
