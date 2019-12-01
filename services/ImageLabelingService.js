@@ -9,6 +9,8 @@ module.exports = class ImageLabelingService {
 
     /**
      * Returns top-most label for the image passed in the filePath.
+     * @param {*} filePath String value of image's file path in the system.
+     * @returns {String} Image's top-most label in String. Async.
      */
     static async getLabelForImage(filePath) {
 
