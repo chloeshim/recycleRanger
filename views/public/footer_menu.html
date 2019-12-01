@@ -41,11 +41,45 @@
         <input id="waste_image_input" name="wasteimage" type="file" accept="image/*" capture style="display: none;"/>
     </form>
 
-    <div id="image_input_display_wrapper" class="d-flex flex-row justify-content-center">
 
-        <!-- TODO: Remove this after the analysis page is ready.  -->
-        <img id="image_input_display" src="#" alt="input image"/>
-    </div>    
+    <!-- Waste analysis modal -->
+    <div class="modal fade" id="recycling_steps_modal_container" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">            
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recycling_steps_title">Analyzing waste type...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    <div id="image_input_display_wrapper" class="d-flex flex-row justify-content-center">                                
+                        <img id="image_input_display" src="#" alt="input image"/>
+                    </div>
+                </div>
+
+                <div class="modal-footer d-flex flex-column align-items-start">
+                    
+                    <div>Recycling steps:</div>
+
+                    <div id="recycling_steps_spinner" class="spinner-border text-success align-self-center" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+
+                    <div>
+                        <ul id="recycling_steps_list">
+                            <li>Step 1,</li>                        
+                            <li>Step 2,</li>
+                            <li>Step 3!</li>
+                        </ul>
+                    </div>                    
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

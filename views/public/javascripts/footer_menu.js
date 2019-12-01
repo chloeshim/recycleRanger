@@ -5,7 +5,6 @@ function bindFooterButtons() {
     bindFooterProfileButton()
     bindFooterTakePictureButton()
 
-    hideImageInputDisplay()
     observeTakePictureInput()
 }
 
@@ -24,22 +23,28 @@ function bindFooterTakePictureButton() {
     })
 }
 
-function hideImageInputDisplay() {
-    // TODO: Update this implementation to show the full file after the analysis page is ready.
-    $("#image_input_display").hide()
-}
-
 function observeTakePictureInput() {
 
     $("#waste_image_input").change(function() {
-        // TODO: Update this implementation to show the full file after the analysis page is ready.
-        displayImage(this)
-        submitImageFileToServer()
+        
+        resetRecyclingStepsModal()
+        showRecyclingStepsModal(this)
+
+        // submitImageFileToServer() // TODO: Uncomment this later after the modal is ready.
     })
 
 }
 
-function displayImage(input) {
+function resetRecyclingStepsModal() {
+    
+    $("#recycling_steps_title").val("Analyzing waste type, please wait...")
+    $("#recycling_steps_list").empty()
+    
+    $("#recycling_steps_spinner").show()
+}
+
+
+function showRecyclingStepsModal(input) {
 
     var fileAvailable = (input.files != null) && (input.files[0] != null)
 
@@ -51,7 +56,7 @@ function displayImage(input) {
 
     fileReader.onload = (file) => {
         $("#image_input_display").attr("src", file.target.result)
-        $("#image_input_display").show()
+        $("#recycling_steps_modal_container").modal()
     }
 
     fileReader.readAsDataURL(input.files[0])
