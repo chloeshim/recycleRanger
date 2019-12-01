@@ -30,14 +30,14 @@ function observeTakePictureInput() {
         resetRecyclingStepsModal()
         showRecyclingStepsModal(this)
 
-        // submitImageFileToServer() // TODO: Uncomment this later after the modal is ready.
+        retrieveRecyclingStepsForImageInForm()
     })
 
 }
 
 function resetRecyclingStepsModal() {
     
-    $("#recycling_steps_title").val("Analyzing waste type, please wait...")
+    $("#recycling_steps_title").html("Analyzing waste type, please wait...")
     $("#recycling_steps_list").empty()
     
     $("#recycling_steps_spinner").show()
@@ -62,7 +62,7 @@ function showRecyclingStepsModal(input) {
     fileReader.readAsDataURL(input.files[0])
 }
 
-function submitImageFileToServer() {
+function retrieveRecyclingStepsForImageInForm() {
 
     var form = $("#waste_image_detection_form")[0]
 
@@ -78,15 +78,11 @@ function submitImageFileToServer() {
         type: 'POST',
         enctype: 'multipart/form-data',
         success: (data, status, xhr) => {
-            // TODO: Add proper implementation here later.
-
-            console.log("Received waste type: " + data.wasteType)
-
-            console.log("Recycling steps:")
             
-            data.recyclingSteps.forEach(step => {
-                console.log(step)
-            })
+            $("#recycling_steps_spinner").hide()
+
+            setWasteTypeTitle(data.wasteType)
+            setRecyclingSteps(data.recyclingSteps)            
         },
         error: (xhr) => {
             // TODO: Add proper implementation here later.
@@ -95,3 +91,17 @@ function submitImageFileToServer() {
     })
 
 }
+
+function setWasteTypeTitle(wasteType) {
+    $("#recycling_steps_title").html("Waste type found: " + wasteType)
+}
+
+function setRecyclingSteps(recyclingSteps) {
+
+    recyclingSteps.forEach(step => {
+
+        var stepItem = $("<li>" + step + "</li>")
+        $("#recycling_steps_list").append(stepItem)
+    })
+}
+
