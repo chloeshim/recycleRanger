@@ -1,6 +1,9 @@
 "use strict";
 const path = require("path");
 
+const multer =  require("multer");
+const imageuploads = multer({ dest: "imageuploads/" });
+
 module.exports = class FSERoute {
 
 
@@ -30,5 +33,13 @@ module.exports = class FSERoute {
         app.get('/footer', (req, res) => {
             res.sendFile(path.resolve(__dirname + '/../views/public/footer_menu.html'));
         });
+
+        /* post */
+        app.post('/wasteimages', imageuploads.single("wasteimage"), (req, res, next) => {
+            
+            // TODO: Implement proper handling here later.
+            console.log("Received file: " + req.file);
+        })
+
     }
 }
