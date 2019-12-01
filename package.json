@@ -28,6 +28,7 @@
     "nodemon": "^2.0.0"
   },
   "dependencies": {
+    "@google-cloud/vision": "^1.7.2",
     "socket.io": "^2.3.0"
   }
 }
