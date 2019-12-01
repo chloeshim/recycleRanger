@@ -39,6 +39,9 @@ module.exports = class FSERoute {
             
             // TODO: Implement proper handling here later.
             console.log("Received file: " + req.file);
+
+            // TODO: Return proper waste type based on the passed image later.
+            res.send({wastetype: "unknown"})
         })
 
     }
