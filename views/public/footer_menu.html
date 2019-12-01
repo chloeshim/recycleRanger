@@ -26,8 +26,7 @@
         </div>
 
         <div id="footer_btn_take_picture" class="footer_img_wrapper">
-            <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger">
-            <input id="footer_take_picture_input" type="file" accept="image/*" capture style="display: none;" />
+            <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger">            
         </div>
 
         <div class="footer_img_wrapper_right_edge">
@@ -38,6 +37,10 @@
 
     </div>
     
+    <form action="/wasteimages" method="post" enctype="multipart/form-data" id="waste_image_detection_form" style="display: none;">
+        <input id="waste_image_input" name="wasteimage" type="file" accept="image/*" capture style="display: none;"/>
+    </form>
+
     <div id="image_input_display_wrapper" class="d-flex flex-row justify-content-center">
 
         <!-- TODO: Remove this after the analysis page is ready.  -->

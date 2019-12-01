@@ -20,7 +20,7 @@ function bindFooterProfileButton() {
 function bindFooterTakePictureButton() {
 
     $("#footer_btn_take_picture").click( () => {
-        $("#footer_take_picture_input").trigger("click")
+        $("#waste_image_input").trigger("click")
     })
 }
 
@@ -31,9 +31,10 @@ function hideImageInputDisplay() {
 
 function observeTakePictureInput() {
 
-    $("#footer_take_picture_input").change(function (){
+    $("#waste_image_input").change(function() {
         // TODO: Update this implementation to show the full file after the analysis page is ready.
         displayImage(this)
+        submitImageFileToServer()
     })
 
 }
@@ -54,4 +55,31 @@ function displayImage(input) {
     }
 
     fileReader.readAsDataURL(input.files[0])
+}
+
+function submitImageFileToServer() {
+
+    var form = $("#waste_image_detection_form")[0]
+
+    var data = new FormData(form)    
+    
+    $.ajax({
+        url:"/wasteimages",
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        method: 'POST',
+        type: 'POST',
+        enctype: 'multipart/form-data',
+        success: (data, status, xhr) => {
+            // TODO: Add proper implementation here later.
+            console.log("received wastetype: " + data.wastetype)
+        },
+        error: (xhr) => {
+            // TODO: Add proper implementation here later.
+            console.log(xhr.statusText + xhr.responseText)
+        }
+    })
+
 }
