@@ -17,27 +17,11 @@
     <link rel="stylesheet" href="stylesheets/footer_menu.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/quiz.css">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
     <script src="javascripts/quiz.js"></script>
 </head>
-<header>
-    <img src="images/Recycle Ranger.png" class="center header_logo" alt="Recycle Ranger">
-</header>
 <body>
-<div class="container-fluid quiz-main-container" id="question-main-container">
-<div class="page-title text-center">
-Today's Quiz
-</div>
-<div class="container content-container" id="question_text">
-</div>
-    <div class="button-group" id="btngrp_answers">
-        <button class="btn btn-secondary" id="btn_yes">Yes</button>
-        <button class="btn btn-secondary" id="btn_no">No</button>
-    </div>
-    <div class="button-group D-n" id="btngrp_next_page">
-        <button class="btn btn-secondary" id="btn_explanation">Show explanation</button>
-        <button class="btn btn-secondary" id="btn_next_question_on_mainpage">Next Question</button>
-    </div>
-</div>
+
 <div class="container-fluid quiz-main-container D-n" id="result-page-main-container">
     <div class="page-title text-center">
         Congratulations!
@@ -77,10 +61,42 @@ Today's Quiz
         <button class="btn btn-secondary" id="btn_return_home">Return Home</button>
     </div>
 </div>
+<div>
+    <section class="intro-section">
+        <div class="container">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8">
+                <div class="intro" style="margin-bottom:25px;">
+                    <div class="profile-img"><img src="images/Recycle%20Ranger.png" alt=""></div>
+                    <div class="page-title text-center font-yellow dark-brown">
+                        Today's Quiz
+                    </div>
+                    <div class="container content-container" >
+                        <p id="question_text">
+                        </p>
+                        <div class="button-group" id="btngrp_answers">
+                            <button class="btn btn-secondary btn-answers" id="btn_yes">Yes</button>
+                            <button class="btn btn-secondary btn-answers" id="btn_no">No</button>
+                        </div>
+                        <div class="button-group D-n" id="btngrp_next_page">
+                            <button class="btn btn-secondary btn-answers" id="btn_explanation">Show explanation</button>
+                            <button class="btn btn-secondary btn-answers" id="btn_next_question_on_mainpage">Next Question</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<script src="/socket.io/socket.io.js"></script>
 </body>
 
 <!--Modal-->
-<button type="button" class="btn btn-info btn-lg D-n" data-toggle="modal" data-target="#modal_questionAnswer" id="btn_questionAnswer">Open answer Modal</button>
+<button type="button" class="btn btn-info btn-lg D-n" data-toggle="modal" data-target="#modal_questionAnswer"
+        id="btn_questionAnswer">Open answer Modal
+</button>
 <div class="modal fade " id="modal_questionAnswer" role="dialog">
     <div class="modal-dialog">
         <!--Modal content-->
@@ -109,7 +125,7 @@ Today's Quiz
         
         <div id="footer_btn_take_picture" class="footer_img_wrapper">
             <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger">
-            <input id="footer_take_picture_input" type="file" accept="image/*" capture style="display: none;" />
+            <input id="footer_take_picture_input" type="file" accept="image/*" capture style="display: none;"/>
         </div>
         
         <div class="footer_img_wrapper_right_edge">
