@@ -39,6 +39,9 @@ $(() => {
             const questionText = currentIndex.toString() +". " + question.text;
             $("#question_text").text(questionText);
             $("#modal-text").text(question.explanation)
+            this.displayItem("btngrp_answers");
+            this.hideItem("btngrp_next_page");
+
         }
         shuffle() {
             var array = [0,1,2,3];
@@ -60,8 +63,9 @@ $(() => {
             return array;
 
         }
-        showAnswerModal(){
-
+        render_close_modal(){
+            this.hideItem("btngrp_answers")
+            this.displayItem("btngrp_next_page");
         }
         renderResultPage(){
 
@@ -77,7 +81,6 @@ $(() => {
         const questions = new Questions();
         const shuffled_question_index = presenters.shuffle();
 
-
         presenters.renderQuestion(questions.bank[shuffled_question_index[0]],currentIndex);
 
         console.log("ho");
@@ -91,6 +94,7 @@ $(() => {
                 $("#modal-title").text("Incorrect");
             }
             $("#btn_questionAnswer").click();
+            presenters.render_close_modal();
         })
 
         $("#btn_no").click(()=>{
@@ -102,6 +106,7 @@ $(() => {
                 $("#modal-title").text("Incorrect");
             }
             $("#btn_questionAnswer").click();
+            presenters.render_close_modal();
         })
 
         $("#btn_next_question").click(()=>{
@@ -109,6 +114,14 @@ $(() => {
             presenters.renderQuestion(questions.bank[shuffled_question_index[currentIndex-1]],currentIndex);
             $("#modal_questionAnswer").modal("hide");
             console.log("current score is " + currentScore.toString())
+        })
+
+        $("#btn_next_question_on_mainpage").click(()=>{
+            $("#btn_next_question").click();
+        })
+
+        $("#btn_explanation").click(()=>{
+            $("#btn_questionAnswer").click();
         })
     }();
 });
