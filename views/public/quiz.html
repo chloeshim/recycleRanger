@@ -21,7 +21,7 @@
     <img src="images/Recycle Ranger.png" class="center header_logo" alt="Recycle Ranger">
 </header>
 <body>
-<div class="container-fluid" id="main-container">
+<div class="container-fluid quiz-main-container" id="question-main-container">
 <div class="page-title text-center">
 Today's Quiz
 </div>
@@ -36,11 +36,49 @@ Today's Quiz
         <button class="btn btn-secondary" id="btn_next_question_on_mainpage">Next Question</button>
     </div>
 </div>
-
+<div class="container-fluid quiz-main-container D-n" id="result-page-main-container">
+    <div class="page-title text-center">
+        Congratulations!
+    </div>
+    <div class="container content-container">
+        You just finished today's quiz
+        <hr>
+        
+        <div class="row">
+            <div class="col-6">
+                <div class=" text-center Fz-60 Fz-B" id="text_correct_question_number">6</div>
+            </div>
+            <div class="col-6">
+                <div class=" text-center Fz-60 Fz-B" id="text_incorrect_question_number">2</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="large-text text-center light-green">Correct</div>
+            </div>
+            <div class="col-6">
+                <div class="large-text text-center light-coral">Incorrect</div>
+            </div>
+        </div>
+        <hr>
+        Here's your rewards:
+        <div class="row">
+            <div class="col-6">
+                <img src="images/eco-heart.png" alt="Eco-Heart" height="100" width="100" class="center">
+            </div>
+            <div class="col-6">
+                <div class="large-text text-center Fz-50 Fz-B" id="text_heart_count">+20</div>
+            </div>
+        </div>
+    </div>
+    <div class="button-group">
+        <button class="btn btn-secondary" id="btn_return_home">Return Home</button>
+    </div>
+</div>
 </body>
 
 <!--Modal-->
-<button type="button" class="btn btn-info btn-lg " data-toggle="modal" data-target="#modal_questionAnswer" id="btn_questionAnswer">Open answer Modal</button>
+<button type="button" class="btn btn-info btn-lg D-n" data-toggle="modal" data-target="#modal_questionAnswer" id="btn_questionAnswer">Open answer Modal</button>
 <div class="modal fade " id="modal_questionAnswer" role="dialog">
     <div class="modal-dialog">
         <!--Modal content-->
