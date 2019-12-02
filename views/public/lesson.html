@@ -12,7 +12,8 @@
     <script src="javascripts/index.js"></script>
     <!-- TODO: This script could've been imported in the footer_menu.html, but somehow it won't work... Until we figure out how to fix that, please import the footer_menu on the main page. -->
     <script src="javascripts/footer_menu.js"></script>
-
+    
+    <link rel="stylesheet" href="stylesheets/quiz.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <script>
         $(function(){
@@ -24,23 +25,34 @@
         });
     </script>
 </head>
-<header>
-    <div id="headerLogo"></div>
-</header>
-<body>
-    <div class="main">
-        <h4 class="header-title">Today's Lesson</h4>
-        <div class="main_container container center">
-            <h5 class="lesson-title">Plastic Clamshell Disposal</h5>
-            <img src="images/clamshell.jpeg" class="center lesson-img" alt="Recycle Ranger">
-            <div class="instructions">
-                <span>1. Remove Adhesive Stickers</span>
-                <span>2. Recycle in the bin</span>
-            </div>
-            <button class="btn btn-primary center" id="lesson_btn">Got it</button>
 
+<body>
+    <section class="intro-section">
+        <div class="container">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8">
+                <div class="intro" style="margin-bottom:25px;">
+                    <div class="profile-img"><img src="images/Recycle%20Ranger.png" alt="" width="100%"></div>
+                    <div id="question-main-container">
+                        <div class="Fz-30 text-center font-yellow dark-brown Mb-5" style="margin-top:-30px;">
+                            Today's Lesson
+                        </div>
+                        <div class="container content-container">
+                            <h5 class="lesson-title">Plastic Clamshell Disposal</h5>
+                            <img src="images/clamshell.jpeg" class="center lesson-img" alt="Recycle Ranger">
+                            <div class="instructions">
+                                <span>1. Remove Adhesive Stickers</span>
+                                <span>2. Recycle in the bin</span>
+                            </div>
+                            <button class="btn btn-primary center" id="lesson_btn">Got it</button>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
 </body>
 
 
