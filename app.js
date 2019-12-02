@@ -43,15 +43,25 @@ app.use(express.static(path.resolve(__dirname + '/views/public')));
 // app.use(express.static(path.join(__dirname, '/views/public')));
 
 // have the user score ready
+var currentScore = 1997;
 io.on('connection', (socket) => {
 
-  var currentScore = 1197;
+  if (currentScore < 2000) {
+    socket.emit("displayBadge", "gold");
+  } else {
+    socket.emit("displayBadge", "platinum");
+  }
 
   socket.emit("currentScore", currentScore);
 
   socket.on("updateScore", (increment) => {
     currentScore += increment;
     socket.emit("currentScore", currentScore);
+    if (currentScore < 2000) {
+      socket.emit("displayBadge", "gold");
+    } else {
+      socket.emit("displayBadge", "platinum");
+    }
   });
 });
 

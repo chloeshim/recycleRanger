@@ -38,15 +38,15 @@
                         <div>
                             <h6> As of today, you have collected <a id="currentHeartNum"></a> <img
                                     src="images/red-heart.png" height="45" width="45"> </img></h6>
-                            <img src="images/badge_progress.png" style="margin-bottom:15px;width:70%;height:25%;">
+                            <img id="badgeProgress" src="images/badge_progress.png" style="margin-bottom:15px;width:70%;height:25%;">
                             </img>
                             <h6> <a id="remainHearts"> </a> more to unlock the next level! </h6>
                             <button type="button" class="btn btn-primary btn-lg"
                                 onclick="window.location.href='/leaderboard.html';" style="margin-top:10px;"> Cheer your
                                 peers now!</button>
                             <!-- just for demo propose how to update score. -->
-                            <!-- <button type="button" class="btn btn-primary btn-lg"
-                                onclick="updateScore(5)" style="margin-top:10px;"> updateScore!</button>  -->
+                            <button type="button" class="btn btn-primary btn-lg"
+                                onclick="updateScore(5)" style="margin-top:10px;"> updateScore!</button>
                         </div>
                         <hr>
                         <div>
@@ -73,7 +73,19 @@
 
         socket.on("currentScore", function (currentScore) {
             document.getElementById("currentHeartNum").innerHTML = currentScore;
-            document.getElementById("remainHearts").innerHTML = 2000 - currentScore;
+            if (currentScore >= 2000){
+                document.getElementById("remainHearts").innerHTML = 5000 - currentScore;
+            } else {
+                document.getElementById("remainHearts").innerHTML = 2000 - currentScore;
+            }
+        });
+
+        socket.on("displayBadge", function (currentBadge) {
+            if (currentBadge == "gold"){
+                document.getElementById("badgeProgress").src = "images/badge_progress_gold.png";
+            } else if(currentBadge == 'platinum'){
+                document.getElementById("badgeProgress").src = "images/badge_progress_platinum.png";
+            }
         });
 
         function updateScore(increment) {
