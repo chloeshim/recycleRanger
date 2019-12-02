@@ -19,48 +19,10 @@
     <link rel="stylesheet" href="stylesheets/quiz.css">
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
     <script src="javascripts/quiz.js"></script>
+
 </head>
 <body>
 
-<!--<div class="container-fluid quiz-main-container D-n" id="result-page-main-container">-->
-    <!--<div class="page-title text-center">-->
-        <!--Congratulations!-->
-    <!--</div>-->
-    <!--<div class="container content-container">-->
-        <!--You just finished today's quiz-->
-        <!--<hr>-->
-        <!---->
-        <!--<div class="row">-->
-            <!--<div class="col-6">-->
-                <!--<div class=" text-center Fz-60 Fz-B" id="text_correct_question_number">6</div>-->
-            <!--</div>-->
-            <!--<div class="col-6">-->
-                <!--<div class=" text-center Fz-60 Fz-B" id="text_incorrect_question_number">2</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="row">-->
-            <!--<div class="col-6">-->
-                <!--<div class="large-text text-center light-green">Correct</div>-->
-            <!--</div>-->
-            <!--<div class="col-6">-->
-                <!--<div class="large-text text-center light-coral">Incorrect</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<hr>-->
-        <!--Here's your rewards:-->
-        <!--<div class="row">-->
-            <!--<div class="col-6">-->
-                <!--<img src="images/eco-heart.png" alt="Eco-Heart" height="100" width="100" class="center">-->
-            <!--</div>-->
-            <!--<div class="col-6">-->
-                <!--<div class="large-text text-center Fz-50 Fz-B" id="text_heart_count">+20</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="button-group">-->
-        <!--<button class="btn btn-secondary" id="btn_return_home">Return Home</button>-->
-    <!--</div>-->
-<!--</div>-->
 <div>
     <section class="intro-section">
         <div class="container">
@@ -158,8 +120,6 @@
         </div>
     </div>
 </div>
-
-<!--Footer-->
 <footer>
     <div class="footer_menu_wrapper d-flex flex-row justify-content-center">
         
@@ -171,15 +131,61 @@
         
         <div id="footer_btn_take_picture" class="footer_img_wrapper">
             <img class="footer_img center" src="images/camera_icon.png" alt="Recycle Ranger">
-            <input id="footer_take_picture_input" type="file" accept="image/*" capture style="display: none;"/>
         </div>
         
         <div class="footer_img_wrapper_right_edge">
-            <a href="/leaderboard.html">
+            <a href="/profile.html">
                 <img class="footer_img center" src="images/user_icon.jpg" alt="Recycle Ranger">
             </a>
         </div>
     
+    </div>
+    
+    <form action="/wasteimages" method="post" enctype="multipart/form-data" id="waste_image_detection_form" style="display: none;">
+        <input id="waste_image_input" name="wasteimage" type="file" accept="image/*" capture style="display: none;"/>
+    </form>
+    
+    
+    <!-- Waste analysis modal -->
+    <div class="modal fade" id="recycling_steps_modal_container" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recycling_steps_title">Analyzing waste type... </h5>
+                    <div id="modal_title_spinner" class="spinner-border text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    <div id="image_input_display_wrapper" class="d-flex flex-row justify-content-center">
+                        <img id="image_input_display" src="#" alt="input image"/>
+                    </div>
+                </div>
+                
+                <div class="modal-footer d-flex flex-column align-items-start">
+                    
+                    <div>Recycling steps:</div>
+                    
+                    <div id="recycling_steps_spinner" class="spinner-border text-success align-self-center" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    
+                    <div>
+                        <ul id="recycling_steps_list">
+                            <li>Step 1,</li>
+                            <li>Step 2,</li>
+                            <li>Step 3!</li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
     </div>
 </footer>
 </html>
