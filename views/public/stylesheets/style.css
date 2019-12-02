@@ -261,6 +261,8 @@ ul {
 .M-0 { margin: 0; }
 .Mt-4 { margin-top: 4px; }
 .Mt-32 { margin-top: 32px; }
+
+.Mb-5 { margin-bottom: 5px; }
 .Mb-10 { margin-bottom: 10px; }
 .My-10 { margin-top: 10px; margin-bottom: 10px; }
 .Mx-a { margin-left: auto; margin-right: auto; }

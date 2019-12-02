@@ -22,67 +22,112 @@
 </head>
 <body>
 
-<div class="container-fluid quiz-main-container D-n" id="result-page-main-container">
-    <div class="page-title text-center">
-        Congratulations!
-    </div>
-    <div class="container content-container">
-        You just finished today's quiz
-        <hr>
-        
-        <div class="row">
-            <div class="col-6">
-                <div class=" text-center Fz-60 Fz-B" id="text_correct_question_number">6</div>
-            </div>
-            <div class="col-6">
-                <div class=" text-center Fz-60 Fz-B" id="text_incorrect_question_number">2</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="large-text text-center light-green">Correct</div>
-            </div>
-            <div class="col-6">
-                <div class="large-text text-center light-coral">Incorrect</div>
-            </div>
-        </div>
-        <hr>
-        Here's your rewards:
-        <div class="row">
-            <div class="col-6">
-                <img src="images/eco-heart.png" alt="Eco-Heart" height="100" width="100" class="center">
-            </div>
-            <div class="col-6">
-                <div class="large-text text-center Fz-50 Fz-B" id="text_heart_count">+20</div>
-            </div>
-        </div>
-    </div>
-    <div class="button-group">
-        <button class="btn btn-secondary" id="btn_return_home">Return Home</button>
-    </div>
-</div>
+<!--<div class="container-fluid quiz-main-container D-n" id="result-page-main-container">-->
+    <!--<div class="page-title text-center">-->
+        <!--Congratulations!-->
+    <!--</div>-->
+    <!--<div class="container content-container">-->
+        <!--You just finished today's quiz-->
+        <!--<hr>-->
+        <!---->
+        <!--<div class="row">-->
+            <!--<div class="col-6">-->
+                <!--<div class=" text-center Fz-60 Fz-B" id="text_correct_question_number">6</div>-->
+            <!--</div>-->
+            <!--<div class="col-6">-->
+                <!--<div class=" text-center Fz-60 Fz-B" id="text_incorrect_question_number">2</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-6">-->
+                <!--<div class="large-text text-center light-green">Correct</div>-->
+            <!--</div>-->
+            <!--<div class="col-6">-->
+                <!--<div class="large-text text-center light-coral">Incorrect</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<hr>-->
+        <!--Here's your rewards:-->
+        <!--<div class="row">-->
+            <!--<div class="col-6">-->
+                <!--<img src="images/eco-heart.png" alt="Eco-Heart" height="100" width="100" class="center">-->
+            <!--</div>-->
+            <!--<div class="col-6">-->
+                <!--<div class="large-text text-center Fz-50 Fz-B" id="text_heart_count">+20</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="button-group">-->
+        <!--<button class="btn btn-secondary" id="btn_return_home">Return Home</button>-->
+    <!--</div>-->
+<!--</div>-->
 <div>
     <section class="intro-section">
         <div class="container">
             <div class="col-md-1 col-lg-2"></div>
             <div class="col-md-10 col-lg-8">
                 <div class="intro" style="margin-bottom:25px;">
-                    <div class="profile-img"><img src="images/Recycle%20Ranger.png" alt=""></div>
-                    <div class="page-title text-center font-yellow dark-brown">
-                        Today's Quiz
-                    </div>
-                    <div class="container content-container" >
-                        <p id="question_text">
-                        </p>
-                        <div class="button-group" id="btngrp_answers">
-                            <button class="btn btn-secondary btn-answers" id="btn_yes">Yes</button>
-                            <button class="btn btn-secondary btn-answers" id="btn_no">No</button>
+                    <div class="profile-img"><img src="images/Recycle%20Ranger.png" alt="" width="100%"></div>
+                    <div id="question-main-container">
+                        <div class="page-title text-center font-yellow dark-brown" style="margin-top:-30px;">
+                            Today's Quiz
                         </div>
-                        <div class="button-group D-n" id="btngrp_next_page">
-                            <button class="btn btn-secondary btn-answers" id="btn_explanation">Show explanation</button>
-                            <button class="btn btn-primary btn-answers" id="btn_next_question_on_mainpage">Next Question</button>
+                        <div class="container content-container" >
+                            <p id="question_text">
+                            </p>
+                            <div class="button-group" id="btngrp_answers">
+                                <button class="btn btn-secondary btn-answers" id="btn_yes">Yes</button>
+                                <button class="btn btn-secondary btn-answers" id="btn_no">No</button>
+                            </div>
+                            <div class="button-group D-n" id="btngrp_next_page">
+                                <button class="btn btn-secondary btn-answers" id="btn_explanation">Show explanation</button>
+                                <button class="btn btn-primary btn-answers" id="btn_next_question_on_mainpage">Next Question</button>
+                            </div>
                         </div>
+                        
+                        
                     </div>
+                    <div class="D-n" id="result-page-main-container">
+                        <div class="text-center font-yellow dark-brown Fz-30 Mb-5" style="margin-top:-15px;">
+                            Congratulations!
+                        </div>
+                        <div class="container content-container">
+                            You just finished today's quiz
+                            <hr>
+            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class=" text-center Fz-30 Fz-B" id="text_correct_question_number">6</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class=" text-center Fz-30 Fz-B" id="text_incorrect_question_number">2</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="large-text text-center medium-green">Correct</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="large-text text-center light-coral">Incorrect</div>
+                                </div>
+                            </div>
+                            <hr>
+                            Here's your rewards:
+                            <div class="row">
+                                <div class="col-6">
+                                    <img src="images/red-heart.png" alt="Red-Heart" height="100" width="100" style="margin-top:-15px;" class="center">
+                                </div>
+                                <div class="col-6">
+                                    <div class="large-text text-center Fz-30 Fz-B" style="margin-top:15px;" id="text_heart_count">+20</div>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn btn-primary" id="btn_return_home">Return Home</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    
                     
                 </div>
             </div>
@@ -104,7 +149,7 @@
             <div class="modal-body" style="text-align: center; margin: auto">
                 <h2 id="modal-title">Incident Report Ready</h2>
                 <p id="modal-text-your-choice">ff</p>
-                <b>Do you know: </b>
+                <b>Did you know: </b>
                 <p id="modal-text">ff</p>
             </div>
             <div class="modal-footer" style="text-align: center; margin: auto">
