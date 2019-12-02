@@ -81,6 +81,8 @@ $(() => {
             $("#text_correct_question_number").text(currentScore.toString());
             $("#text_incorrect_question_number").text((totalQuestions - currentScore).toString());
             $("#text_heart_count").text("+" + (currentScore * 5).toString());
+            var socket = io();
+            socket.emit('updateScore',currentScore * 5 );
         }
 
     }
@@ -91,6 +93,7 @@ $(() => {
         const questions = new Questions();
         const service = new Services();
 
+        var socket = io();
         var currentScore = 0;
         var currentIndex = 1;
         const totalQuestions = 3;
@@ -150,9 +153,7 @@ $(() => {
         })
 
         $("#btn_return_home").click(()=>{
-            console.log("b4")
             $(location).attr('href', '/index.html');
-            console.log("aft")
         })
     }();
 });
