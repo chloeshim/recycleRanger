@@ -98,8 +98,8 @@ img.heart {
 
 .main {
     margin-top: 10%;
-    margin-left: 60px;
-    margin-right: 60px;
+    /* margin-left: 60px;
+    margin-right: 60px; */
 }
 
 .welcome {
@@ -131,9 +131,28 @@ img.heart {
 /* leaderboard */
 .main_container {
     margin-top: 25px;
+    margin-bottom: 20px;
     padding: 5px;
     border: 2px solid black;
     border-radius: 10px;
+    background: #fff;
+}
+
+hr.line{
+	border-top: 1px solid #8c8b8b;
+}
+
+div.cheer_item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin-right : 20px;
+    cursor: pointer;
+    float: right;
+}
+
+.caption {
+    display: block;
 }
 
 .user_img {
@@ -151,15 +170,13 @@ img.heart {
 .frieng_img {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 20px;
     margin-left : 10px;
 }
 
 .cheer_img {
     width: 25px;
     height: 25px;
-    margin-left : 20px;
-    cursor: pointer;
 }
 
 .cheered_content {
