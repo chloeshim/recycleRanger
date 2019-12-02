@@ -9,7 +9,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
+    <script src="/socket.io/socket.io.js"></script>
     <script src="javascripts/index.js"></script>
+    <script src="javascripts/common.js"></script>
     <script src="javascripts/footer_menu.js"></script>
     
     <link rel="stylesheet" href="stylesheets/footer_menu.css">
@@ -21,36 +23,81 @@
     <img src="images/Recycle Ranger.png" class="center header_logo" alt="Recycle Ranger">
 </header>
 <body>
-<div class="container-fluid" id="main-container">
+<div class="container-fluid quiz-main-container" id="question-main-container">
 <div class="page-title text-center">
 Today's Quiz
 </div>
-<div class="container content-container">
-1. Do you take off the lids when you recycle a plastic water bottle?
+<div class="container content-container" id="question_text">
 </div>
-    <div class="button-group">
+    <div class="button-group" id="btngrp_answers">
         <button class="btn btn-secondary" id="btn_yes">Yes</button>
         <button class="btn btn-secondary" id="btn_no">No</button>
     </div>
+    <div class="button-group D-n" id="btngrp_next_page">
+        <button class="btn btn-secondary" id="btn_explanation">Show explanation</button>
+        <button class="btn btn-secondary" id="btn_next_question_on_mainpage">Next Question</button>
+    </div>
 </div>
-
+<div class="container-fluid quiz-main-container D-n" id="result-page-main-container">
+    <div class="page-title text-center">
+        Congratulations!
+    </div>
+    <div class="container content-container">
+        You just finished today's quiz
+        <hr>
+        
+        <div class="row">
+            <div class="col-6">
+                <div class=" text-center Fz-60 Fz-B" id="text_correct_question_number">6</div>
+            </div>
+            <div class="col-6">
+                <div class=" text-center Fz-60 Fz-B" id="text_incorrect_question_number">2</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="large-text text-center light-green">Correct</div>
+            </div>
+            <div class="col-6">
+                <div class="large-text text-center light-coral">Incorrect</div>
+            </div>
+        </div>
+        <hr>
+        Here's your rewards:
+        <div class="row">
+            <div class="col-6">
+                <img src="images/eco-heart.png" alt="Eco-Heart" height="100" width="100" class="center">
+            </div>
+            <div class="col-6">
+                <div class="large-text text-center Fz-50 Fz-B" id="text_heart_count">+20</div>
+            </div>
+        </div>
+    </div>
+    <div class="button-group">
+        <button class="btn btn-secondary" id="btn_return_home">Return Home</button>
+    </div>
+</div>
 </body>
-<button type="button" class="btn btn-info btn-lg D-n" data-toggle="modal" data-target="#modal_reportReadyAlert" id="btn_showReportReadyModal">Open Report Modal</button>
-<div class="modal fade " id="modal_reportReadyAlert" role="dialog">
+
+<!--Modal-->
+<button type="button" class="btn btn-info btn-lg D-n" data-toggle="modal" data-target="#modal_questionAnswer" id="btn_questionAnswer">Open answer Modal</button>
+<div class="modal fade " id="modal_questionAnswer" role="dialog">
     <div class="modal-dialog">
         <!--Modal content-->
         <div class="modal-content">
             <div class="modal-body" style="text-align: center; margin: auto">
-                <h2>Incident Report Ready</h2>
-                <p id="alert-text-reportReady"></p>
+                <h2 id="modal-title">Incident Report Ready</h2>
+                <p id="modal-text-your-choice">ff</p>
+                <p id="modal-text">ff</p>
             </div>
             <div class="modal-footer" style="text-align: center; margin: auto">
-                <button type="button" class="btn btn-primary" id="btn_goToFillReport">Fill Now</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Later</button>
+                <button type="button" class="btn btn-primary" id="btn_next_question">Next Question!</button>
             </div>
         </div>
     </div>
 </div>
+
+<!--Footer-->
 <footer>
     <div class="footer_menu_wrapper d-flex flex-row justify-content-center">
         

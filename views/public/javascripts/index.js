@@ -17,4 +17,8 @@ $(function(){
     $("#lesson_btn").click(function() {
         $(location).attr('href', '/index.html');
     });
+
+    $("#leader_board").click(function() {
+        $(location).attr('href', '/leaderboard.html');
+    });
 })
