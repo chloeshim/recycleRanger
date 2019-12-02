@@ -5,7 +5,6 @@ function bindFooterButtons() {
     bindFooterProfileButton()
     bindFooterTakePictureButton()
 
-    hideImageInputDisplay()
     observeTakePictureInput()
 }
 
@@ -20,25 +19,37 @@ function bindFooterProfileButton() {
 function bindFooterTakePictureButton() {
 
     $("#footer_btn_take_picture").click( () => {
-        $("#footer_take_picture_input").trigger("click")
+        $("#waste_image_input").trigger("click")
     })
-}
-
-function hideImageInputDisplay() {
-    // TODO: Update this implementation to show the full file after the analysis page is ready.
-    $("#image_input_display").hide()
 }
 
 function observeTakePictureInput() {
 
-    $("#footer_take_picture_input").change(function (){
-        // TODO: Update this implementation to show the full file after the analysis page is ready.
-        displayImage(this)
+    $("#waste_image_input").change(function() {
+        
+        resetRecyclingStepsModal()
+        showRecyclingStepsModal(this)
+
+        retrieveRecyclingStepsForImageInForm()
     })
 
 }
 
-function displayImage(input) {
+function resetRecyclingStepsModal() {
+    
+    $("#recycling_steps_title").html("Analyzing waste type...")
+    $("#recycling_steps_list").empty()
+    
+    showSpinners()
+}
+
+function showSpinners() {
+
+    $("#modal_title_spinner").show()
+    $("#recycling_steps_spinner").show()
+}
+
+function showRecyclingStepsModal(input) {
 
     var fileAvailable = (input.files != null) && (input.files[0] != null)
 
@@ -50,8 +61,58 @@ function displayImage(input) {
 
     fileReader.onload = (file) => {
         $("#image_input_display").attr("src", file.target.result)
-        $("#image_input_display").show()
+        $("#recycling_steps_modal_container").modal()
     }
 
     fileReader.readAsDataURL(input.files[0])
 }
+
+function retrieveRecyclingStepsForImageInForm() {
+
+    var form = $("#waste_image_detection_form")[0]
+
+    var data = new FormData(form)    
+    
+    $.ajax({
+        url:"/wasteimages",
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        method: 'POST',
+        type: 'POST',
+        enctype: 'multipart/form-data',
+        success: (data, status, xhr) => {
+            
+            hideSpinners()
+
+            setWasteTypeTitle(data.wasteType)
+            setRecyclingSteps(data.recyclingSteps)            
+        },
+        error: (xhr) => {
+            // TODO: Add proper implementation here later.
+            console.log(xhr.statusText + xhr.responseText)
+        }
+    })
+
+}
+
+function hideSpinners() {
+    
+    $("#modal_title_spinner").hide()
+    $("#recycling_steps_spinner").hide()
+}
+
+function setWasteTypeTitle(wasteType) {
+    $("#recycling_steps_title").html("Waste type found: " + wasteType)
+}
+
+function setRecyclingSteps(recyclingSteps) {
+
+    recyclingSteps.forEach(step => {
+
+        var stepItem = $("<li>" + step + "</li>")
+        $("#recycling_steps_list").append(stepItem)
+    })
+}
+

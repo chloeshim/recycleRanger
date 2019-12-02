@@ -1,7 +1,9 @@
 $(function(){
       
     $("#footerMenu").load("footer_menu.html", () => {
-        bindFooterButtons()
+
+        // TODO: This one 1 second delay is needed to wait for the whole page to be rendered. Revisit if there's a cleaner way to do this later.
+        setTimeout(bindFooterButtons, 1000)        
     })
 
     $("#daily_lesson").click(function() {
