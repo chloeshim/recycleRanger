@@ -4,7 +4,7 @@
   "description": "Plastics team",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js 3000"
+    "start": "node app.js 3000"
   },
   "repository": {
     "type": "git",
