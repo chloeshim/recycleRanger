@@ -12,7 +12,9 @@
     
     <script src="javascripts/index.js"></script>
     <!-- TODO: This script could've been imported in the footer_menu.html, but somehow it won't work... Until we figure out how to fix that, please import the footer_menu on the main page. -->
-    <script src="javascripts/footer_menu.js"></script> 
+    <script src="javascripts/footer_menu.js"></script>
+    
+    <script src="/socket.io/socket.io.js"></script>
 
     <link rel="stylesheet" href="stylesheets/style.css">
     <script>
@@ -23,34 +25,43 @@
 </head>
 
 <body>
-
-<div class="main">
-    <img src="images/Recycle Ranger.png" class="logo center" alt="Recycle Ranger">
-    <div class="home container main_container">
-        <div id="welcome_container" class="welcome">
-            <h4 class="dark-green">Good Afternoon, Sasha! </h4>
-        </div>
-        <div id="quiz_container" class="quiz-container">
-            <h5>Today's Quiz</h5>
-            <button id="today_quiz" class="btn btn-primary">Quiz</button>
-        </div>
-        <div id="lesson_container" class="lesson-container">
-            <h5>Daily Lesson</h5>
-            <button id="daily_lesson" class="btn btn-primary">Lesson</button>
-        </div>
-        <div id="profile_container" class="profile-container">
-            <div>
-                <h6>You saved</h6>
+<section class="intro-section">
+    <div class="container">
+        <div class="col-md-1 col-lg-2"></div>
+        <div class="col-md-10 col-lg-8">
+            <div class="intro" style="margin-bottom:25px;">
+                <div class="profile-img"><img src="images/Recycle%20Ranger.png" alt="" width="100%"></div>
+                <div id="question-main-container">
+                    <div class="container content-container">
+                        <div id="welcome_container" class="welcome">
+                            <h4 class="text-center font-yellow dark-brown Mb-5">Good Afternoon, Sasha! </h4>
+                        </div>
+                        <div id="quiz_container" class="quiz-container">
+                            <h5>Today's Quiz</h5>
+                            <button id="today_quiz" class="btn btn-primary">Quiz</button>
+                        </div>
+                        <div id="lesson_container" class="lesson-container">
+                            <h5>Daily Lesson</h5>
+                            <button id="daily_lesson" class="btn btn-primary">Lesson</button>
+                        </div>
+                        <div id="profile_container" class="profile-container">
+                            <div>
+                                <h6>You saved</h6>
+                            </div>
+                            <div class="heart-container">
+                                <h6>My hearts</h6>
+                                <div class=" text-center Fz-30 Fz-B" id="heart_number"></div>
+                                <img src="images/red-heart.png" class="heart center" alt="my-heart">
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
             </div>
-            <div class="heart-container">
-                <h6>My hearts</h6>
-                <img src="images/red-heart.png" class="heart center" alt="my-heart">
-            </div>
         </div>
-
     </div>
+</section>
 
-</div>
 
 </body>
 
