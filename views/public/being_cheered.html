@@ -14,7 +14,7 @@
 
     <!-- Specific script for leaderboard page -->
     <script src="javascripts/friendsData.js"></script>
-    <script src="javascripts/leaderboard.js"></script>
+    <script src="javascripts/being_cheered.js"></script>
 
     <!-- TODO: This script could've been imported in the footer_menu.html, but somehow it won't work... Until we figure out how to fix that, please import the footer_menu on the main page. -->
     <script src="javascripts/footer_menu.js"></script> 
@@ -26,38 +26,34 @@
 
 <div class="main">
     <div id="welcome_container center">
-        <h5>Good Afternoon, Sasha. </h5>
-        <h6><center>Sasha</center></h6>
-        <img class="user_img center" src="images/sasha.png" alt="Recycle Ranger" height="180" width="180">
+        <h5>Good Afternoon, <span id="myName0"></span>. </h5>
+        <h6><center><span id="myName1"></span></center></h6>
+        <img class="user_img center" src="images/user.png" height="180" width="180">
         <h6> As of today, you have collected <a id="currentHeartNum"></a> 
             <img src="images/red-heart.png" height="45" width="45"> </img></h6>
     </div>
-    
     <div id="leaderboard_container" class="main_container">
-        <h6><strong>Friends (<span id="allFriends"></span>)</strong></h6>
-        <div id="leaderboard_content">
-            <!-- <h6>
-                <img src="images/user.png" height="25" width="25" ><span id="friendName">Panu</span>
-                <img src="images/red-heart.png" height="30" width="30"> </img>
-                <button id="today_quiz" class="btn btn-primary">Cheer</button>
-            </h6>  -->
+    <h5><strong>
+            New message from Sasha!
+        </strong>
+        </h5> <br/>
+            <h6><strong>
+                    Hey <span id="friendName"></span>!
+                </strong>
+                
+            </h6> 
+            <p>I see that you've collected <span id="heartNum"></span> hearts so far!
+            That's good but mine is <span id="sashaHeart"></span> now :P.
+            Come on keep up and follow me!
+            </p>
+            Sasha
+        <div id="leaderboard_content" class="cheered_content"></div>
         </div>
     </div>
 
+    <button id="leader_board" class="btn btn-primary center">Back to Leaderboard</button>
+
 </div>
-<script src="/socket.io/socket.io.js"></script>
-    <script>
-
-        var socket = io()
-
-        socket.on("currentScore", function (currentScore) {
-            document.getElementById("currentHeartNum").innerHTML = currentScore;
-        });
-
-        function updateScore(increment) {
-            socket.emit("updateScore", increment);
-        }
-    </script>
 </body>
 <footer>
     <div id="footerMenu"></div>
