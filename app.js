@@ -65,6 +65,10 @@ io.on('connection', (socket) => {
   });
 });
 
+// Export Google key code
+
+const exec = require('child_process').exec;
+const myShellScript = exec('sh import-google-vision-key.sh recycle-ranger-demo-gvapikey.json');
 
 //////////////// Starting server ////////////////
 if (!isNaN(parseInt(process.argv[2]))) {
