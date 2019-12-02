@@ -105,6 +105,3 @@ dist
 
 # Image upload files
 imageuploads/
-
-# JSON keyfiles
-*key.json

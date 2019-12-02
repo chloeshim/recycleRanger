@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "recycle-ranger-demo",
+  "private_key_id": "9244ac03b8665cda23995da1eb639ac48bfb2fe4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDEOXvDARwK+HDp\nZGtfU9zlYOCX+e6VjNtex6onErgUEfwvmsRKLazedxZvpQqcShzfmvcBZzepUs/Y\nzEjrtFk8ijjKcf9iTBZNKcJutLSbktbBE7GJnAUA6Fm8frY9C9DQsF7RG1HRtPTq\nZdDdJ8B4Qyl6ne60aru03k9J74tjNolPPiEsG+TwHO4j+SOIBFD+XJ2j3KNPg9tj\nVaxI3MQqfi9F4YdoeZU3tjzG4o3V4xCEaU2vrVf+KTa/FokssIapWiuyMPIDYybQ\nNAwKednrplRP3nfoccmZcXL60HsKyyCJTWl+35Mc5JlEm8Okeq3gFwkqqOX7ayr/\nMWasKFl3AgMBAAECggEAA4u7JRD+aZ5WX/92qbVJ+gKtpiZTApIf7NjgvCRAB9gz\nM54YsAbtWJTdyR3XpJarB7+IjOVdK40+lDBg1+E67AtBEdj9ve2j0umFdjPSwCOO\naiN2KC6zYTcWks5Mclx+kWFMrBjloXzA0e5wYbzZCn0lIRXBv9mPmIxhQKUfxPWC\ndus55SDQAjBV2pqSRyJRZz5V91jodFyfcNRFPTZapLAyUc4msZtA3+rWppiuVg74\nLN6ZpwGejpZS+VOXKeHuKskMmMQZ/0sY5B0vh3OGTxenDe98OSGUWIKD4Q3AlG68\n2TKyQ9f4LZO3/Eo9HNqBjAVFq1b0sfQqRmX3x6bWMQKBgQD1ddMFJ6W5rj3qLouV\ncQPKacyvGcYRJpEX89PbZkZRQ/VEzdbz0UoYSVVtb/F+nKNyCbvnhQUm2iuwpM8E\nZZrlD2BRkdWlh/7cabXyyUn9lR/AR4BLK1zA+GXtnZqme5XUhNfxYnS0nd3NXDpX\nbADNV4ikcLmMat09eBzXEwexsQKBgQDMpnHkdfItgHf4KFF0NqZZ3K1Vxx20qdVq\naxrW0zpeMHC8m5ts383Z4RzV6d0P3KeWIiWzG33Tft9p3DvbKKwDvHuRyJuvQGH2\n4YZhv8Qet7FbHKENb4u5BMtrDTmZ2uO1PPfzW/HgnVQyHH6vPMYUsuGEvqe/3U6q\niRCU3k8fpwKBgBZBRo6zF42MRMTUz4cPJh7WFN7TYWfwrTsUumKsFTgNB1Hjr9eP\nZD5rd7liauzl2tPeGhFVuC/bnBZ5+uMVK0QVbtA2fr5xZCQr2XlX0sORH73ZPcKS\n/efpHaS7o2fw0JbiLIoQOTCfF5sk/40pl7EGfLccGVan4cNO/p5pdUshAoGAXabh\nweHzxLzgqdCRjfQgZkkljXaEcpOx1XRUIPEi6c2TGcy/8K/ufQGWd5IBFuwsSPkx\ndWhkSW/q/3/IaH+RUFhl2A4MqMN20Urde0gNkN0RLZfJX+Om9jFqgX/Y1z6jK+JN\nubFe3CJDUHdXxguyvfAqYdv52kSFZmc5Dlc5sEsCgYAu9Esxc0l9FO5cpGnl5oOb\n/+6ph34f8CKdr4ntkNUmz7Ti7gZuISd0UZGsaCe+cVb5nlNLRetx2BjOD69RzvAf\npcHmTAyU2MytHAKCajBo5UxAetdsqmoowwTPv1CQWxiAZ4A7mBBNu99fwLvdig2D\nNYIzDwkPXkQIHxDUopuXIg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "demo-app@recycle-ranger-demo.iam.gserviceaccount.com",
+  "client_id": "108736076789664762829",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/demo-app%40recycle-ranger-demo.iam.gserviceaccount.com"
+}
