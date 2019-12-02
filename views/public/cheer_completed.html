@@ -14,7 +14,7 @@
 
     <!-- Specific script for leaderboard page -->
     <script src="javascripts/friendsData.js"></script>
-    <script src="javascripts/leaderboard.js"></script>
+    <script src="javascripts/cheer_completed.js"></script>
 
     <!-- TODO: This script could've been imported in the footer_menu.html, but somehow it won't work... Until we figure out how to fix that, please import the footer_menu on the main page. -->
     <script src="javascripts/footer_menu.js"></script> 
@@ -33,16 +33,16 @@
             <img src="images/red-heart.png" height="45" width="45"> </img></h6>
     </div>
     
-    <div id="leaderboard_container" class="main_container">
-        <h6><strong>Friends (<span id="allFriends"></span>)</strong></h6>
-        <div id="leaderboard_content">
-            <!-- <h6>
-                <img src="images/user.png" height="25" width="25" ><span id="friendName">Panu</span>
-                <img src="images/red-heart.png" height="30" width="30"> </img>
-                <button id="today_quiz" class="btn btn-primary">Cheer</button>
-            </h6>  -->
+    <div id="leaderboard_container" class="main_container" style="text-align:center;">
+            <h5><strong>
+                You've cheered <span id="friendName"></span>!!
+            </strong>
+            </h5> 
+        <div id="leaderboard_content" class="cheered_content"></div>
         </div>
     </div>
+
+    <button id="leader_board" class="btn btn-primary center">Back to Leaderboard</button>
 
 </div>
 <script src="/socket.io/socket.io.js"></script>

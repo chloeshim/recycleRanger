@@ -129,6 +129,7 @@ img.heart {
 /* leaderboard */
 .main_container {
     margin-top: 25px;
+    padding: 5px;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -144,6 +145,26 @@ img.heart {
     border-radius: 50%;
     border: 2px solid black;
 }
+
+.frieng_img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left : 10px;
+}
+
+.cheer_img {
+    width: 25px;
+    height: 25px;
+    margin-left : 20px;
+    cursor: pointer;
+}
+
+.cheered_content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 /* Daily Lesson page */
 .instructions span {

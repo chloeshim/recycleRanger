@@ -30,5 +30,12 @@ module.exports = class FSERoute {
         app.get('/footer', (req, res) => {
             res.sendFile(path.resolve(__dirname + '/../views/public/footer_menu.html'));
         });
+
+        app.get('/cheer_completed', (req, res) => {
+            res.sendFile(path.resolve(__dirname + '/../views/public/cheer_completed.html'));
+        });
+        app.get('/being_cheered', (req, res) => {
+            res.sendFile(path.resolve(__dirname + '/../views/public/being_cheered.html'));
+        });
     }
 }
