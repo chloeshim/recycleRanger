@@ -1,7 +1,7 @@
 $(() => {
     /* UI */
     class Questions {
-        
+
         constructor() {
 
             // From https://www.theguardian.com/environment/2018/jul/01/think-you-know-how-to-recycle-take-the-quiz
@@ -26,9 +26,9 @@ $(() => {
                     answer: false,
                     explanation: "Recycling in plastic bags ends up in landfills. This is one of the most common mistake.",
                 }
-    
+
             ];
-        }        
+        }
     }
 
     class Presenters {
@@ -95,7 +95,7 @@ $(() => {
 
     /* Client */
     const quizClient = function () {
-        
+
         const presenters = new Presenters();
         const questions = new Questions();
         const service = new Services();
@@ -115,11 +115,11 @@ $(() => {
             console.log("hit yes");
             if (questions.bank[shuffled_question_index[currentIndex - 1]].answer === true) {
                 $("#modal-title").text("Correct");
-                $("#modal-title").addClass("medium-green").addClass("Fz-B");
+                $("#modal-title").removeClass("light-coral").addClass("medium-green").addClass("Fz-B");
                 currentScore += 1;
             } else {
                 $("#modal-title").text("Incorrect");
-                $("#modal-title").addClass("light-coral").addClass("Fz-B");
+                $("#modal-title").removeClass("medium-green").addClass("light-coral").addClass("Fz-B");
             }
             $("#modal-text-your-choice").text("You chose YES.")
             $("#btn_questionAnswer").click();
