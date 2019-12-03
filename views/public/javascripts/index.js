@@ -13,18 +13,18 @@ $(function(){
     })
 
     $("#daily_lesson").click(function() {
-        $(location).attr('href', '/lesson.html');
+        $(location).attr('href', '/lesson');
     });
 
     $("#today_quiz").click(function() {
-        $(location).attr('href', '/quiz.html');
+        $(location).attr('href', '/quiz');
     });
 
     $("#lesson_btn").click(function() {
-        $(location).attr('href', '/index.html');
+        $(location).attr('href', '/');
     });
 
     $("#leader_board").click(function() {
-        $(location).attr('href', '/leaderboard.html');
+        $(location).attr('href', '/leader');
     });
 })
