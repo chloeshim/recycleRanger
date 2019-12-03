@@ -1,0 +1,336 @@
+html {
+    height: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: 'Geneva', 'Verdana', sans-serif;
+    min-height:100%;
+}
+
+/* Colors */
+
+.dark-green {
+    color: #435938;
+}
+
+.medium-green {
+    color: #658C5A;
+}
+
+.light-green {
+    color: #C6D936;
+}
+
+.dark-brown {
+    color: #BF9765;
+}
+
+.light-grey {
+    color: #5a6268;
+}
+
+.light-coral {
+    color: lightcoral;
+}
+/* Background Colors */
+
+.bg-dark-green {
+    background-color: #435938;
+}
+
+.bg-medium-green {
+    background-color: #658C5A;
+}
+
+.bg-light-green {
+    background-color: #C6D936;
+}
+
+.bg-dark-brown {
+    background-color: #BF9765;
+}
+
+.bg-light-grey {
+    background-color: #5a6268;
+}
+
+.bg-light-coral {
+    background-color: #F08080;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+/* Buttons */
+
+.btn-primary {
+    background-color: #658C5A;
+    border-color: #658C5A;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+
+    background-color: #C6D936;
+    border-color: #C6D936;
+    color: #343a40;
+}
+
+.btn-primary .active {
+    background-color: #C6D936;
+    border-color: #C6D936;
+}
+
+.btn-primary:hover {
+    background-color: #435938;
+    border-color: #435938;
+}
+
+/* index(home) page */
+
+img.logo {
+    height: 180px;
+    width: 180px;
+}
+
+img.heart {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.main {
+    margin-top: 10%;
+    /* margin-left: 60px;
+    margin-right: 60px; */
+}
+
+.welcome {
+    text-align: center;
+    border-bottom: 1px solid darkgreen;
+    padding-top: 5%;
+}
+
+.home h5 {
+    display: inline-block;
+    margin: 7%;
+}
+
+.home h6 {
+    display: inline-block;
+    margin: 7%;
+}
+
+.profile-container div{
+    display:inline-block;
+}
+
+.heart-container {
+    float:right;
+    display:contents !important;
+}
+
+
+/* leaderboard */
+.main_container {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #fff;
+}
+
+hr.line{
+	border-top: 1px solid #8c8b8b;
+}
+
+div.cheer_item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin-right : 20px;
+    cursor: pointer;
+    float: right;
+}
+
+.caption {
+    display: block;
+}
+
+.content-container {
+    padding: 10px;
+    padding-bottom: 15px;
+    background-color: white;
+    min-height: 250px;
+    background-color: lightgray;
+    font-size: medium;
+}
+
+.user_img {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.frieng_img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-left : 10px;
+}
+
+.cheer_img {
+    width: 25px;
+    height: 25px;
+}
+
+.cheered_content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Daily Lesson page */
+.instructions span {
+    display: block;
+}
+
+.lesson-img {
+    height: 150px;
+    width: 150px;
+}
+
+.header-title {
+    text-align: center;
+    border-bottom: 1px solid darkgreen;
+    padding-bottom: 5%;
+}
+
+.page-title {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.lesson-title {
+    margin-top:5%;
+}
+
+#lesson_btn {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.footer_img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.header_logo {
+    height: 80px;
+    width: 80px;
+    margin-top: 10%;
+}
+
+.D-n { display: none !important;  }
+
+/* profile page intro    */
+
+.intro-section{ padding-top: 120px; position: relative; background-size: cover;
+	z-index: 1; background-image: url(../images/yosemitte.png);}
+
+.intro-section:before{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0;
+	right: 0; background: rgba(0,0,0, .2); }
+
+.intro-section:after{ content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+	height: 150px; z-index: -1; background: #fff; }
+
+.intro{ padding: 0 20px; margin-top: 100px; text-align: center; background: #fff; }
+
+.intro .profile-img{ height: 200px; width: 200px; border-radius: 100px; margin: 0 auto;
+	overflow: hidden; position: relative; top: -100px; margin-bottom: -70px;  }
+
+.intro .information > li{ display: block; margin: 5px 0; }
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.large-text{
+    font-size: larger;
+    font-weight: bold;
+}
+.text-center{
+    text-align: center;
+}
+.vertical-center{
+    height: 50px;
+    line-height: 50px;
+}
+
+
+.Ww-bw { word-wrap: break-word; }
+.Lst-n { list-style-type: none; }
+
+/* align */
+.Ta-c { text-align: center; }
+.Fl-l { float: left; }
+.Fl-r { float: right; }
+
+/* margins */
+.M-0 { margin: 0; }
+.Mt-4 { margin-top: 4px; }
+.Mt-32 { margin-top: 32px; }
+
+.Mb-5 { margin-bottom: 5px; }
+.Mb-10 { margin-bottom: 10px; }
+.My-10 { margin-top: 10px; margin-bottom: 10px; }
+.Mx-a { margin-left: auto; margin-right: auto; }
+.Mr-10 { margin-right: 10px; }
+
+/* paddings*/
+.P-0 { padding: 0; }
+.P-10 { padding: 10px; }
+.P-16 { padding: 16px; }
+.P-20 { padding: 20px; }
+.Py-4 { padding-top: 4px; padding-bottom: 4px; }
+.Py-10 { padding-top: 10px; padding-bottom: 10px; }
+.Py-20 { padding-top: 20px; padding-bottom: 20px; }
+.Px-0 { padding-left: 0; padding-right: 0; }
+.Px-16 { padding-left: 16px; padding-right: 16px; }
+.Px-20 { padding-left: 20px; padding-right: 20px; }
+.Pb-10 { padding-bottom: 10px; }
+.Pt-100 { padding-top: 100px; }
+
+/* fonts */
+.Fz-12 { font-size: 12px; }
+.Fz-14 { font-size: 14px; }
+.Fz-16 { font-size: 16px; }
+.Fz-18 { font-size: 18px; }
+.Fz-20 { font-size: 20px; }
+.Fz-30 { font-size: 30px; }
+.Fz-50 { font-size: 50px; }
+.Fz-60 { font-size: 60px; }
+
+.Fz-B {font-weight: bold;}
+
+.light-coral {color: lightcoral;}

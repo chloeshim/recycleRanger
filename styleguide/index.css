@@ -3,7 +3,18 @@
 }
 
 .color-container {
-	height: 200px;	
-	padding-top: 30px;	
-	text-align: center;		
+	height: 200px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.color-container {
+	height: 200px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.color-bar{
+	height:100%;
+	width:10%;
 }
