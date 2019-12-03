@@ -1,33 +1,38 @@
 $(() => {
     /* UI */
     class Questions {
-        // From https://www.theguardian.com/environment/2018/jul/01/think-you-know-how-to-recycle-take-the-quiz
-        bank = [
-            {
-                text: "Do you take off the lids when you recycle a plastic water bottle?",
-                answer: true,
-                explanation: "Most caps are made out of a different type of plastic that the bottle is made out of. This may result in contamination during the recycling process.",
-            },
-            {
-                text: "You just finished a pizza with your friends! Can you recycle the pizza box?",
-                answer: false,
-                explanation: "Not if there are food waste or grease on it. This may contaminate the process. Anything with food waste should go in the regular bins",
-            },
-            {
-                text: "Should you separate wasted glass drinkware with bottles and jars?",
-                answer: true,
-                explanation: "Drinkware glass has different melting point from bottles and jars, and clog the machine. Similarly, ceramics cannot be processed",
-            },
-            {
-                text: "Should you wrap your recycling in plastic bags?",
-                answer: false,
-                explanation: "Recycling in plastic bags ends up in landfills. This is one of the most common mistake.",
-            }
+        
+        constructor() {
 
-        ];
+            // From https://www.theguardian.com/environment/2018/jul/01/think-you-know-how-to-recycle-take-the-quiz
+            this.bank = [
+                {
+                    text: "Do you take off the lids when you recycle a plastic water bottle?",
+                    answer: true,
+                    explanation: "Most caps are made out of a different type of plastic that the bottle is made out of. This may result in contamination during the recycling process.",
+                },
+                {
+                    text: "You just finished a pizza with your friends! Can you recycle the pizza box?",
+                    answer: false,
+                    explanation: "Not if there are food waste or grease on it. This may contaminate the process. Anything with food waste should go in the regular bins",
+                },
+                {
+                    text: "Should you separate wasted glass drinkware with bottles and jars?",
+                    answer: true,
+                    explanation: "Drinkware glass has different melting point from bottles and jars, and clog the machine. Similarly, ceramics cannot be processed",
+                },
+                {
+                    text: "Should you wrap your recycling in plastic bags?",
+                    answer: false,
+                    explanation: "Recycling in plastic bags ends up in landfills. This is one of the most common mistake.",
+                }
+    
+            ];
+        }        
     }
 
     class Presenters {
+
         displayItem(objectID) {
             $("#" + objectID).removeClass("D-n");
         }
@@ -90,6 +95,7 @@ $(() => {
 
     /* Client */
     const quizClient = function () {
+        
         const presenters = new Presenters();
         const questions = new Questions();
         const service = new Services();
