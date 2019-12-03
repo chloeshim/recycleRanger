@@ -1,5 +1,6 @@
 "use strict";
 
+const path = require("path");
 const vision = require("@google-cloud/vision");
 
 /**
@@ -14,7 +15,10 @@ module.exports = class ImageLabelingService {
      */
     static async getLabelForImage(filePath) {
 
-        var client = new vision.ImageAnnotatorClient()
+        // TODO: This is unsafe. Move this to outside of code later.
+        var keyPath = path.resolve(__dirname + '/../recycle-ranger-demo-gvapikey.json')
+        
+        var client = new vision.ImageAnnotatorClient({ keyFilename: keyPath })
 
         var [result] = await client.labelDetection(filePath)
         var labels = result.labelAnnotations
