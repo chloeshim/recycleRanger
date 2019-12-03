@@ -115,11 +115,11 @@ $(() => {
             console.log("hit yes");
             if (questions.bank[shuffled_question_index[currentIndex - 1]].answer === true) {
                 $("#modal-title").text("Correct");
-                $("#modal-title").removeClass("light-coral").addClass("medium-green").addClass("Fz-B");
+                $("#modal-title").removeClass("dark-brown").addClass("medium-green").addClass("Fz-B");
                 currentScore += 1;
             } else {
                 $("#modal-title").text("Incorrect");
-                $("#modal-title").removeClass("medium-green").addClass("light-coral").addClass("Fz-B");
+                $("#modal-title").removeClass("medium-green").addClass("dark-brown").addClass("Fz-B");
             }
             $("#modal-text-your-choice").text("You chose YES.")
             $("#btn_questionAnswer").click();
@@ -130,11 +130,11 @@ $(() => {
             console.log("hit no");
             if (questions.bank[shuffled_question_index[currentIndex - 1]].answer === false) {
                 $("#modal-title").text("Correct");
-                $("#modal-title").removeClass("light-coral").addClass("medium-green").addClass("Fz-B");
+                $("#modal-title").removeClass("dark-brown").addClass("medium-green").addClass("Fz-B");
                 currentScore += 1;
             } else {
                 $("#modal-title").text("Incorrect");
-                $("#modal-title").removeClass("medium-green").addClass("light-coral").addClass("Fz-B");
+                $("#modal-title").removeClass("medium-green").addClass("dark-brown").addClass("Fz-B");
             }
             $("#modal-text-your-choice").text("You chose NO.")
             $("#btn_questionAnswer").click();
