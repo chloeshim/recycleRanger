@@ -1,4 +1,17 @@
 
+// MARK: - On document loaded setup
+$(function() {
+
+    $("#footerMenu").load("footer_menu.html", () => {
+
+        // TODO: This one 1 second delay is needed to wait for the whole page to be rendered. Revisit if there's a cleaner way to do this later.
+        setTimeout(bindFooterButtons, 1000)
+    })
+})
+
+
+// MARK: - Function declarations -
+
 function bindFooterButtons() {
 
     bindFooterHomeButton()
