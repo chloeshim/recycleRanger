@@ -60,6 +60,14 @@ body {
     background-color: #5a6268;
 }
 
+.bg-light-coral {
+    background-color: #F08080;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
 /* Buttons */
 
 .btn-primary {
