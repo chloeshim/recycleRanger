@@ -37,7 +37,7 @@ $(() => {
         }
 
         renderQuestion(question, currentIndex) {
-            const questionText = currentIndex.toString() + ". " + question.text;
+            const questionText = currentIndex.toString() + "/3. " + question.text;
             $("#question_text").text(questionText);
             $("#modal-text").text(question.explanation);
             this.displayItem("btngrp_answers");
