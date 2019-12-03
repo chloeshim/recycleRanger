@@ -19,7 +19,7 @@ module.exports = class FSERoute {
         });
 
         app.get('/styleguide', (req, res) => {
-            res.sendFile(path.resolve(__dirname + '/../styleguide/index.html'));
+            res.sendFile(path.resolve(__dirname + '/../views/public/styleguide.html'));
         });
 
         app.get('/leader', (req, res) => {
