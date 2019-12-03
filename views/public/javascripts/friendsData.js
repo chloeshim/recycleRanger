@@ -1,3 +1,3 @@
 let friendList = {};
-friendList.friends = ["Panu", "Eric", "Luca", "Ricardo", "Chloe"];
-friendList.friendHearts = [542, 250, 345, 428, 666];
+friendList.friends = ["Chloe", "Panu", "Eric", "Luca", "Ricardo" ];
+friendList.friendHearts = [666,542,428, 345, 250 ];
