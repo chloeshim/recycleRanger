@@ -5,6 +5,7 @@ Front: Javascript, HTML, CSS
 Style Guide: https://warm-taiga-24004.herokuapp.com/styleguide
 
 Operation Instructions:
+
 0. clone the repo
 1. npm install
 2. npm start
