@@ -21,7 +21,7 @@
   "homepage": "https://github.com/jmerlinz/SRID-Plastics#readme",
   "devDependencies": {
     "ejs": "^2.7.4",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "http": "0.0.0",
     "mongoose": "^5.7.12",
     "nodemon": "^2.0.1"
@@ -29,7 +29,7 @@
   "dependencies": {
     "@google-cloud/vision": "^1.7.2",
     "ejs": "^2.7.4",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "http": "0.0.0",
     "mongoose": "^5.7.12",
     "multer": "^1.4.2",
